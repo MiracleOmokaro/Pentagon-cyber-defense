@@ -122,3 +122,42 @@ function resetContact() {
   if (wrap) wrap.hidden = false;
   if (done) done.hidden = true;
 }
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch(() => {});
+  });
+}
+
+let deferredInstall = null;
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredInstall = e;
+  showInstallChip();
+});
+
+window.addEventListener("appinstalled", () => {
+  deferredInstall = null;
+  const chip = document.getElementById("install-chip");
+  if (chip) chip.remove();
+});
+
+function showInstallChip() {
+  if (document.getElementById("install-chip")) return;
+  if (window.matchMedia("(display-mode: standalone)").matches) return;
+  const chip = document.createElement("button");
+  chip.id = "install-chip";
+  chip.type = "button";
+  chip.className = "install-chip";
+  chip.textContent = "Install app";
+  chip.addEventListener("click", async () => {
+    if (!deferredInstall) return;
+    deferredInstall.prompt();
+    await deferredInstall.userChoice.catch(() => {});
+    deferredInstall = null;
+    chip.remove();
+  });
+  document.body.appendChild(chip);
+}
+

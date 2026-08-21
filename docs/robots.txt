@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://miracleomokaro.github.io/sitemap.xml

@@ -432,3 +432,20 @@ article.stage { display: flex; flex-direction: column; border-radius: 16px; bord
     transition-duration: 0.01ms !important;
   }
 }
+
+.install-chip {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 60;
+  height: 44px;
+  padding: 0 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--elevated);
+  color: var(--fg);
+  font: 500 0.8125rem var(--font-sans);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+.install-chip:hover { background: var(--primary); color: var(--primary-fg); }
+
