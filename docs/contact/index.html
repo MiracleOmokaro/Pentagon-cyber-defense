@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Pentagon Cyber Defense</title>
+  <meta name="description" content="Request a private assessment from Pentagon Cyber Defense." />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <div class="bar">
+        <a class="wordmark" href="../">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 3.2 27.2 11.2v9.6L16 28.8 4.8 20.8v-9.6L16 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M16 9.2 22.4 13.6v5.8L16 23.8 9.6 19.4v-5.8L16 9.2Z" fill="none" stroke="#8fa4c4" stroke-width="1.2" stroke-linejoin="round"/>
+          </svg>
+          <span><span class="name">Pentagon</span><span class="sub">Cyber Defense</span></span>
+        </a>
+        <nav class="desk">
+          <a href="../">Home</a>
+          <a href="../services/">Services</a>
+          <a href="../insights/">Insights</a>
+          <a href="../about/">About</a>
+        </nav>
+        <a class="btn btn-primary btn-sm desk-cta" href="./">Request assessment</a>
+        <button type="button" class="menu-btn" id="menu-btn" aria-label="Open menu" onclick="toggleMenu()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+      <div class="mobile" id="mobile-menu">
+        <a href="../">Home</a>
+        <a href="../services/">Services</a>
+        <a href="../insights/">Insights</a>
+        <a href="../about/">About</a>
+        <a class="btn btn-primary btn-full" href="./" style="margin-top:12px">Request assessment</a>
+      </div>
+    </header>
+    <main>
+      <section class="section pt-page">
+        <div class="inner split">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h1 class="display">Request a private assessment</h1>
+            <p class="lead">Tell us what you run and what worries you. We reply with a scoped plan and a fitted price. No public listing. No obligation beyond the conversation.</p>
+            <ul style="margin-top:2rem" class="muted">
+              <li style="margin-top:0.75rem;font-size:0.875rem">We only take work we can deliver well.</li>
+              <li style="margin-top:0.75rem;font-size:0.875rem">First reply typically within two business days.</li>
+              <li style="margin-top:0.75rem;font-size:0.875rem">NDA available before you share sensitive detail.</li>
+            </ul>
+          </div>
+          <div>
+            <div id="form-done" class="panel" hidden>
+              <div class="ok-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <h2 style="margin-top:1rem;font-size:1.25rem;font-weight:500">Request received</h2>
+              <p class="body">We have your details. We will come back with a scoped conversation — not a generic brochure.</p>
+              <button type="button" class="btn btn-outline" style="margin-top:1.5rem;width:auto" onclick="resetContact()">Send another</button>
+            </div>
+            <form id="form-wrap" class="panel" onsubmit="onContactSubmit(event)">
+              <div class="form-row" style="margin-top:0">
+                <div>
+                  <label for="name">Name</label>
+                  <input id="name" name="name" autocomplete="name" required />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required />
+                </div>
+              </div>
+              <div class="field">
+                <label for="business">Business or site</label>
+                <input id="business" name="business" placeholder="Company or URL" />
+              </div>
+              <div class="field">
+                <label for="stage">Stage</label>
+                <select id="stage" name="stage">
+                  <option value="personal">Personal / grassroots</option>
+                  <option value="micro" selected>Micro / early startup</option>
+                  <option value="growing">Growing small business</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="message">What should we look at?</label>
+                <textarea id="message" name="message" required placeholder="Website, cloud, email, payments, a recent scare — whatever is true."></textarea>
+              </div>
+              <p class="err" id="form-error"></p>
+              <button type="submit" class="btn btn-primary" style="margin-top:1.5rem">Send request</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site">
+      <div class="foot-grid">
+        <div>
+          <a class="wordmark" href="../">
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+              <path d="M16 3.2 27.2 11.2v9.6L16 28.8 4.8 20.8v-9.6L16 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M16 9.2 22.4 13.6v5.8L16 23.8 9.6 19.4v-5.8L16 9.2Z" fill="none" stroke="#8fa4c4" stroke-width="1.2" stroke-linejoin="round"/>
+            </svg>
+            <span><span class="name">Pentagon</span><span class="sub">Cyber Defense</span></span>
+          </a>
+          <p class="body" style="max-width:20rem">Founder-operated private assessments. Clear fix plans. No public listing of your systems.</p>
+        </div>
+        <div>
+          <p class="foot-label">Navigate</p>
+          <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href="../services/">Services</a></li>
+            <li><a href="../insights/">Insights</a></li>
+            <li><a href="../about/">About</a></li>
+            <li><a href="./">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot-label">Documents</p>
+          <ul>
+            <li>NDA</li>
+            <li>Master Service Agreement</li>
+            <li>Statement of Work</li>
+            <li>Service Level Agreement</li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal"><div class="legal-inner"><p>© 2026 Pentagon Cyber Defense</p><p>Private assessments. Fitted cost. Honest delivery.</p></div></div>
+    </footer>
+  </div>
+  <script src="../app.js"></script>
+</body>
+</html>

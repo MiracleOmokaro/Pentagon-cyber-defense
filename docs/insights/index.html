@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Insights — Pentagon Cyber Defense</title>
+  <meta name="description" content="Precise picture of who is hit, how, and what it costs." />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <div class="bar">
+        <a class="wordmark" href="../">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 3.2 27.2 11.2v9.6L16 28.8 4.8 20.8v-9.6L16 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M16 9.2 22.4 13.6v5.8L16 23.8 9.6 19.4v-5.8L16 9.2Z" fill="none" stroke="#8fa4c4" stroke-width="1.2" stroke-linejoin="round"/>
+          </svg>
+          <span><span class="name">Pentagon</span><span class="sub">Cyber Defense</span></span>
+        </a>
+        <nav class="desk">
+          <a href="../">Home</a>
+          <a href="../services/">Services</a>
+          <a class="active" href="./">Insights</a>
+          <a href="../about/">About</a>
+        </nav>
+        <a class="btn btn-primary btn-sm desk-cta" href="../contact/">Request assessment</a>
+        <button type="button" class="menu-btn" id="menu-btn" aria-label="Open menu" onclick="toggleMenu()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+      <div class="mobile" id="mobile-menu">
+        <a href="../">Home</a>
+        <a href="../services/">Services</a>
+        <a class="active" href="./">Insights</a>
+        <a href="../about/">About</a>
+        <a class="btn btn-primary btn-full" href="../contact/" style="margin-top:12px">Request assessment</a>
+      </div>
+    </header>
+    <main>
+      <section class="section pt-page">
+        <div class="inner">
+          <p class="eyebrow">Threat intelligence</p>
+          <h1 class="display">Precise picture of who is hit, how, and what it costs.</h1>
+          <p class="lead">Compiled from 2025–2026 industry reports. Use this to see why a private assessment is cheaper than waiting. Figures are averages from named sources, not a promise about your environment.</p>
+        </div>
+      </section>
+      <section class="section pt-0" id="volume">
+        <div class="inner">
+          <h2 class="block" style="margin-top:0">Weekly attack volume by sector</h2>
+          <p class="body" style="max-width:42rem">Education remains the most attacked industry by weekly volume per organisation. Global average sits near two thousand attempts a week.</p>
+          <div class="chart">
+            <div class="bar-row"><span class="muted">Education</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-val">4,848</span></div>
+            <div class="bar-row"><span class="muted">Government</span><div class="bar-track"><div class="bar-fill" style="width:63%"></div></div><span class="bar-val">3,044</span></div>
+            <div class="bar-row"><span class="muted">Telecom</span><div class="bar-track"><div class="bar-fill" style="width:60%"></div></div><span class="bar-val">2,927</span></div>
+            <div class="bar-row"><span class="muted">Energy</span><div class="bar-track"><div class="bar-fill" style="width:57%"></div></div><span class="bar-val">2,759</span></div>
+            <div class="bar-row"><span class="muted">Hospitality</span><div class="bar-track"><div class="bar-fill" style="width:54%"></div></div><span class="bar-val">2,614</span></div>
+            <div class="bar-row"><span class="muted">Global avg</span><div class="bar-track"><div class="bar-fill" style="width:42%"></div></div><span class="bar-val">2,027</span></div>
+          </div>
+        </div>
+      </section>
+      <section class="section border-t" id="cost">
+        <div class="inner">
+          <h2 class="block" style="margin-top:0">Average breach cost by sector</h2>
+          <p class="body" style="max-width:42rem">Healthcare has led average breach cost for more than a decade. Finance and industrial follow. These are large-organisation averages; small firms still see costs that exceed their startup capital.</p>
+          <div class="chart">
+            <div class="bar-row"><span class="muted">Healthcare</span><div class="bar-track"><div class="bar-fill fg" style="width:100%"></div></div><span class="bar-val">$6.64M</span></div>
+            <div class="bar-row"><span class="muted">Finance</span><div class="bar-track"><div class="bar-fill fg" style="width:95%"></div></div><span class="bar-val">$6.29M</span></div>
+            <div class="bar-row"><span class="muted">Industrial</span><div class="bar-track"><div class="bar-fill fg" style="width:83%"></div></div><span class="bar-val">$5.50M</span></div>
+            <div class="bar-row"><span class="muted">Technology</span><div class="bar-track"><div class="bar-fill fg" style="width:83%"></div></div><span class="bar-val">$5.50M</span></div>
+            <div class="bar-row"><span class="muted">Energy</span><div class="bar-track"><div class="bar-fill fg" style="width:79%"></div></div><span class="bar-val">$5.24M</span></div>
+            <div class="bar-row"><span class="muted">Education</span><div class="bar-track"><div class="bar-fill fg" style="width:63%"></div></div><span class="bar-val">$4.15M</span></div>
+            <div class="bar-row"><span class="muted">Retail</span><div class="bar-track"><div class="bar-fill fg" style="width:57%"></div></div><span class="bar-val">$3.80M</span></div>
+            <div class="bar-row"><span class="muted">Public</span><div class="bar-track"><div class="bar-fill fg" style="width:53%"></div></div><span class="bar-val">$3.50M</span></div>
+          </div>
+        </div>
+      </section>
+      <section class="section border-t" id="sectors">
+        <div class="inner">
+          <h2 class="block" style="margin-top:0">Peculiar trends by sector</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Sector</th>
+                  <th>Peculiar trend</th>
+                  <th>Typical vectors</th>
+                  <th>Avg. breach</th>
+                  <th>Why</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="strong">Education</td><td>Highest weekly attack volume</td><td>Phishing, ransomware, credential theft</td><td class="num">$3.8M–$4.15M</td><td>Open networks, device turnover, thin budgets, student PII</td></tr>
+                <tr><td class="strong">Manufacturing</td><td>Highest share of incidents (5 years)</td><td>Public-app exploit, OT ransomware</td><td class="num">$5.0M–$5.5M</td><td>Supply chains, IP, production downtime when OT stops</td></tr>
+                <tr><td class="strong">Healthcare</td><td>Highest cost per breach</td><td>Ransomware + data theft</td><td class="num">$6.64M</td><td>Patient data, long detection time, operational disruption</td></tr>
+                <tr><td class="strong">Finance</td><td>High-value targeting</td><td>BEC, ransomware, credentials</td><td class="num">$5.56M–$6.29M</td><td>Direct money access and heavy regulation</td></tr>
+                <tr><td class="strong">Government</td><td>High-severity volume</td><td>Ransomware, espionage, disruption</td><td class="num">$2.9M–$3.5M</td><td>Critical services and large data holdings</td></tr>
+                <tr><td class="strong">Technology</td><td>Rising supply-chain attacks</td><td>Supply chain, cloud, insider</td><td class="num">$4.8M–$5.5M</td><td>Trusted position in other companies' stacks</td></tr>
+                <tr><td class="strong">Retail</td><td>Payment data focus</td><td>Web app attacks, ransomware</td><td class="num">$3.5M–$3.8M</td><td>Card data and transaction disruption</td></tr>
+                <tr><td class="strong">Professional services</td><td>Third-party entry point</td><td>Credential theft, ransomware</td><td class="num">~$4.5M+</td><td>Often used as a path into larger clients</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="section border-t" id="regions">
+        <div class="inner">
+          <h2 class="block" style="margin-top:0">Attack vectors by region</h2>
+          <div class="two" style="margin-top:2rem">
+            <article class="card"><h3 style="font-weight:500">North America</h3><p class="body">Identity compromise, phishing, ransomware, public-app exploits</p><p class="stat-note">Highest share of investigated high-value incidents in several reports</p></article>
+            <article class="card"><h3 style="font-weight:500">Europe</h3><p class="body">Public-facing app exploits, malware, identity abuse</p><p class="stat-note">Mix of financially motivated crime and geopolitical activity</p></article>
+            <article class="card"><h3 style="font-weight:500">Asia-Pacific</h3><p class="body">Public apps, supply chain, cloud & IoT, espionage playbooks</p><p class="stat-note">Manufacturing concentration drives both crime and state-aligned activity</p></article>
+            <article class="card"><h3 style="font-weight:500">Middle East & Africa</h3><p class="body">Malware, living-off-the-land, exposed VPNs/firewalls, ransomware</p><p class="stat-note">Higher rates of opportunistic attacks on exposed infrastructure</p></article>
+            <article class="card"><h3 style="font-weight:500">Latin America</h3><p class="body">Ransomware and opportunistic volume</p><p class="stat-note">Often among the highest weekly attacks per organisation</p></article>
+          </div>
+          <p class="body" style="margin-top:1.5rem">Identity and phishing are nearly universal. Exploitation of public-facing applications and exposed infrastructure is especially common in Europe, Asia-Pacific, and parts of Africa and the Middle East.</p>
+        </div>
+      </section>
+      <section class="section border-t">
+        <div class="inner">
+          <p class="eyebrow">Sources</p>
+          <ul style="margin-top:1rem" class="muted">
+            <li style="margin-top:0.25rem;font-size:0.875rem">IBM X-Force Threat Intelligence Index 2026</li>
+            <li style="margin-top:0.25rem;font-size:0.875rem">IBM Cost of a Data Breach Report 2025–2026</li>
+            <li style="margin-top:0.25rem;font-size:0.875rem">Check Point Research weekly attack telemetry 2025–2026</li>
+            <li style="margin-top:0.25rem;font-size:0.875rem">Mandiant M-Trends 2026</li>
+            <li style="margin-top:0.25rem;font-size:0.875rem">Verizon Data Breach Investigations Report 2025–2026</li>
+            <li style="margin-top:0.25rem;font-size:0.875rem">Kaspersky Security Services incident data 2025</li>
+          </ul>
+          <p class="stat-note" style="margin-top:1rem">Costs are average total breach costs, not ransom alone. Sector ranking differs slightly between volume studies and cost studies.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="site">
+      <div class="foot-grid">
+        <div>
+          <a class="wordmark" href="../">
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+              <path d="M16 3.2 27.2 11.2v9.6L16 28.8 4.8 20.8v-9.6L16 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M16 9.2 22.4 13.6v5.8L16 23.8 9.6 19.4v-5.8L16 9.2Z" fill="none" stroke="#8fa4c4" stroke-width="1.2" stroke-linejoin="round"/>
+            </svg>
+            <span><span class="name">Pentagon</span><span class="sub">Cyber Defense</span></span>
+          </a>
+          <p class="body" style="max-width:20rem">Founder-operated private assessments. Clear fix plans. No public listing of your systems.</p>
+        </div>
+        <div>
+          <p class="foot-label">Navigate</p>
+          <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href="../services/">Services</a></li>
+            <li><a href="./">Insights</a></li>
+            <li><a href="../about/">About</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot-label">Documents</p>
+          <ul>
+            <li>NDA</li>
+            <li>Master Service Agreement</li>
+            <li>Statement of Work</li>
+            <li>Service Level Agreement</li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal"><div class="legal-inner"><p>© 2026 Pentagon Cyber Defense</p><p>Private assessments. Fitted cost. Honest delivery.</p></div></div>
+    </footer>
+  </div>
+  <script src="../app.js"></script>
+</body>
+</html>
