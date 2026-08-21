@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Pentagon Cyber Defense",
+      "hasCanvas": false,
+      "bodyTextLen": 2670,
+      "bodyTextHash": "b87fb8329016bdcddb19512d53e2d348bf6ba6a571ae560bf6f4fe8d88545dc5",
+      "bodyTextPrefix": "Pentagon CYBER DEFENSE Home Services Insights About Request asse",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Pentagon Cyber Defense",
+      "hasCanvas": false,
+      "bodyTextLen": 2622,
+      "bodyTextHash": "4d94911171d78c1353455351979f225edabe778cc2cf4d78f616ce1b269023f5",
+      "bodyTextPrefix": "Pentagon CYBER DEFENSE PRIVATE ASSESSMENTS · FITTED COST Protect",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

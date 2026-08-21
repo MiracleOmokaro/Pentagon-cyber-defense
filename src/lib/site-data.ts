@@ -1,0 +1,271 @@
+export const company = {
+  name: "Pentagon Cyber Defense",
+  short: "Pentagon",
+  tagline:
+    "Private security assessments for businesses that cannot afford a public incident — or an unreliable fixer.",
+};
+
+export const attackStats = [
+  {
+    value: "2,000+",
+    label: "Weekly attacks per organisation",
+    note: "Global average, 2025–2026",
+  },
+  {
+    value: "Minutes",
+    label: "Time from access to damage",
+    note: "Escalation is no longer measured in days",
+  },
+  {
+    value: "60%",
+    label: "Small firms that close after a major breach",
+    note: "Within six months of a serious incident",
+  },
+  {
+    value: "96%",
+    label: "Ransomware victims that are SMBs",
+    note: "Where organisation size is known",
+  },
+];
+
+export type BusinessStage = "personal" | "micro" | "growing";
+
+export const stages: Record<
+  BusinessStage,
+  {
+    title: string;
+    who: string;
+    startCost: string;
+    attackCost: string;
+    attackLow: number;
+    attackHigh: number;
+    assessment: string;
+    assessmentNote: string;
+    risks: string[];
+  }
+> = {
+  personal: {
+    title: "Personal & grassroots",
+    who: "Personal sites, freelancers, small shops, solo creators",
+    startCost: "Often less than the cost of a serious incident",
+    attackCost: "$15k–$50k+",
+    attackLow: 15_000,
+    attackHigh: 50_000,
+    assessment: "Focused website & basic system review",
+    assessmentNote: "Critical holes plus a simple fix roadmap",
+    risks: [
+      "Weak or reused passwords",
+      "Unpatched site software",
+      "No backups",
+      "Exposed admin panels",
+      "Simple phishing success",
+    ],
+  },
+  micro: {
+    title: "Micro & early startup",
+    who: "Small teams, early e-commerce, local services, small agencies",
+    startCost: "Startup capital is often smaller than recovery",
+    attackCost: "$50k–$200k",
+    attackLow: 50_000,
+    attackHigh: 200_000,
+    assessment: "Full private assessment + prioritised plan",
+    assessmentNote: "Risk reduction without enterprise overhead",
+    risks: [
+      "Misconfigured cloud services",
+      "Missing multi-factor authentication",
+      "Poor access control",
+      "No monitoring",
+      "Insecure customer data handling",
+    ],
+  },
+  growing: {
+    title: "Growing small business",
+    who: "Scaling startups, digital firms, professional services",
+    startCost: "Years of progress can be erased in one incident",
+    attackCost: "$200k–$1m+",
+    attackLow: 200_000,
+    attackHigh: 1_000_000,
+    assessment: "Deeper assessment + light ongoing support",
+    assessmentNote: "A stronger foundation as you scale",
+    risks: [
+      "Expanding attack surface",
+      "Inconsistent team practices",
+      "Third-party vendor risk",
+      "Incomplete incident response",
+      "Compliance gaps",
+    ],
+  },
+};
+
+export const processSteps = [
+  {
+    n: "01",
+    title: "Scope",
+    body: "We map what you actually run — site, cloud, email, payments — and agree a private, controlled engagement.",
+  },
+  {
+    n: "02",
+    title: "Assess",
+    body: "We find the holes that matter: exposed services, weak identity, missing backups, and misconfigurations.",
+  },
+  {
+    n: "03",
+    title: "Report",
+    body: "You get a clear report: what is broken, how bad it is, exact fix steps, and the order to do them.",
+  },
+  {
+    n: "04",
+    title: "Fix path",
+    body: "We stay with the remediation plan. No public listing. No drama. Just a usable path out of the risk.",
+  },
+];
+
+export const documents = [
+  { name: "NDA", detail: "Your information stays confidential." },
+  { name: "MSA", detail: "The master contract that governs the relationship." },
+  { name: "SOW", detail: "Exactly what we will do, in writing." },
+  { name: "SLA", detail: "Response times and delivery standards we must meet." },
+];
+
+export const sectorTrends = [
+  {
+    sector: "Education",
+    trend: "Highest weekly attack volume",
+    vectors: "Phishing, ransomware, credential theft",
+    cost: "$3.8M–$4.15M",
+    note: "Open networks, device turnover, thin budgets, student PII",
+  },
+  {
+    sector: "Manufacturing",
+    trend: "Highest share of incidents (5 years)",
+    vectors: "Public-app exploit, OT ransomware",
+    cost: "$5.0M–$5.5M",
+    note: "Supply chains, IP, production downtime when OT stops",
+  },
+  {
+    sector: "Healthcare",
+    trend: "Highest cost per breach",
+    vectors: "Ransomware + data theft",
+    cost: "$6.64M",
+    note: "Patient data, long detection time, operational disruption",
+  },
+  {
+    sector: "Finance",
+    trend: "High-value targeting",
+    vectors: "BEC, ransomware, credentials",
+    cost: "$5.56M–$6.29M",
+    note: "Direct money access and heavy regulation",
+  },
+  {
+    sector: "Government",
+    trend: "High-severity volume",
+    vectors: "Ransomware, espionage, disruption",
+    cost: "$2.9M–$3.5M",
+    note: "Critical services and large data holdings",
+  },
+  {
+    sector: "Technology",
+    trend: "Rising supply-chain attacks",
+    vectors: "Supply chain, cloud, insider",
+    cost: "$4.8M–$5.5M",
+    note: "Trusted position in other companies' stacks",
+  },
+  {
+    sector: "Retail",
+    trend: "Payment data focus",
+    vectors: "Web app attacks, ransomware",
+    cost: "$3.5M–$3.8M",
+    note: "Card data and transaction disruption",
+  },
+  {
+    sector: "Professional services",
+    trend: "Third-party entry point",
+    vectors: "Credential theft, ransomware",
+    cost: "~$4.5M+",
+    note: "Often used as a path into larger clients",
+  },
+];
+
+export const weeklyAttacks = [
+  { sector: "Education", weekly: 4848 },
+  { sector: "Government", weekly: 3044 },
+  { sector: "Telecom", weekly: 2927 },
+  { sector: "Energy", weekly: 2759 },
+  { sector: "Hospitality", weekly: 2614 },
+  { sector: "Global avg", weekly: 2027 },
+];
+
+export const breachCosts = [
+  { sector: "Healthcare", cost: 6.64 },
+  { sector: "Finance", cost: 6.29 },
+  { sector: "Industrial", cost: 5.5 },
+  { sector: "Technology", cost: 5.5 },
+  { sector: "Energy", cost: 5.24 },
+  { sector: "Education", cost: 4.15 },
+  { sector: "Retail", cost: 3.8 },
+  { sector: "Public", cost: 3.5 },
+];
+
+export const regions = [
+  {
+    region: "North America",
+    vectors: "Identity compromise, phishing, ransomware, public-app exploits",
+    note: "Highest share of investigated high-value incidents in several reports",
+  },
+  {
+    region: "Europe",
+    vectors: "Public-facing app exploits, malware, identity abuse",
+    note: "Mix of financially motivated crime and geopolitical activity",
+  },
+  {
+    region: "Asia-Pacific",
+    vectors: "Public apps, supply chain, cloud & IoT, espionage playbooks",
+    note: "Manufacturing concentration drives both crime and state-aligned activity",
+  },
+  {
+    region: "Middle East & Africa",
+    vectors: "Malware, living-off-the-land, exposed VPNs/firewalls, ransomware",
+    note: "Higher rates of opportunistic attacks on exposed infrastructure",
+  },
+  {
+    region: "Latin America",
+    vectors: "Ransomware and opportunistic volume",
+    note: "Often among the highest weekly attacks per organisation",
+  },
+];
+
+export const sources = [
+  "IBM X-Force Threat Intelligence Index 2026",
+  "IBM Cost of a Data Breach Report 2025–2026",
+  "Check Point Research weekly attack telemetry 2025–2026",
+  "Mandiant M-Trends 2026",
+  "Verizon Data Breach Investigations Report 2025–2026",
+  "Kaspersky Security Services incident data 2025",
+];
+
+export const principles = [
+  {
+    title: "Do fewer things",
+    body: "One primary offer: private assessment plus a clear fix plan. Everything else supports that.",
+  },
+  {
+    title: "Quality over roster size",
+    body: "Better six people who can actually find and explain holes than twenty who cannot.",
+  },
+  {
+    title: "Proof, not claims",
+    body: "Every engagement must produce a report a client would be willing to show someone else.",
+  },
+  {
+    title: "Be precise about who we are",
+    body: "Founder-operated. No employees. No pretence of being a global firm. No hiding behind student status either.",
+  },
+];
+
+export const rules = [
+  "Speed of delivery matters almost as much as quality.",
+  "Never overpromise.",
+  "Never hide who we are. Never pretend to be a big firm.",
+  "Every week: a client conversation, a completed assessment, or a measurable skill gain.",
+  "Kill anything that does not lead to better delivery or more proof.",
+];
